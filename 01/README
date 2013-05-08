@@ -1,0 +1,7 @@
+在文件test.txt的第三行的最后面加入字符串"insert to third line end", 但是该字符
+串会覆盖掉第4行的内容, 除非是先把插入位置后面的内容先保存起来, 插入之后再保存回
+去.
+
+程序练习了fseek, fopen的用法, 加深了文件流了指针位置的概念.
+
+问题来源: http://stackoverflow.com/questions/16422048/jump-to-end-of-specific-line
