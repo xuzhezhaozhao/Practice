@@ -1,0 +1,29 @@
+Yahoo! Hack Beijing Challenge----Question 1
+
+Given a rational number expressed as A/B where A and B are integers, find the position of Mth occurrence of digit D (0-9) after decimal point. For example 3/7 = 0.4285714285... (A=3, B=7), so the 2nd (M=2) 4 (D=4) is the 7th digit after decimal point.
+Limits:
+0 < A, B, M < 2 x 108
+0 <= D <= 9
+Input:
+The first line of the input gives the number of test cases, N. N test cases follow. Each test case consists of one line containing 4 numbers, A, B, M and D separated by spaces.
+Output:
+Each line contains the position (starting from 1) of the specified digit D. Output â0â if it is impossible to find the digit.
+Sample:
+Input:	
+7
+3 7 1 1
+3 7 2 2
+3 7 3 6
+5 11 2 3
+5 11 3 7
+20 193 20 6
+200000 19893 50 8
+
+Output:
+6
+8
+0
+0
+0
+191
+470
