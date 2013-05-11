@@ -1,0 +1,3 @@
+mmapcopy test.txt to stdout!
+
+This is for a text.
