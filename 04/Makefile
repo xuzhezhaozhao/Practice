@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -c 
+CFLAGS = -Wall -g -c 
 OBJ = mmapcopy.o
 
 all: mmapcopy
