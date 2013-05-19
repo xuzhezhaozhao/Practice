@@ -11,4 +11,4 @@ mmapcopy.o: mmapcopy.c
 	$(CC) $(CFLAGS) mmapcopy.c 
 
 clean:
-	rm -rf *o *~ hello
+	rm -rf *o *~ mmapcopy
