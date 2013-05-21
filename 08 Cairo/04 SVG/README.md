@@ -1,4 +1,4 @@
-[cairo_svg_surface_create][1]
++ [cairo_svg_surface_create][1]
 
 [1]: http://cairographics.org/manual/cairo-SVG-Surfaces.html#cairo-svg-surface-create
 
