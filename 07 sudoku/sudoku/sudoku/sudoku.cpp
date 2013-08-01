@@ -27,6 +27,9 @@ int sudoku[MAX_SIZE][MAX_SIZE] = {
 	{6, 0, 0, 0, 1, 0, 9, 0, 0},
 };
 
+/**
+ * 格式化打印数独
+ */
 void printSudoku()
 {
 	cout << "-------------------------" << endl;
@@ -46,6 +49,9 @@ void printSudoku()
 	}
 }
 
+/**
+ * 检查在位置p处放置数字n是否合格
+ */
 bool check(Pos p, int n)
 {
 	int cur_row = p.row;
@@ -70,6 +76,9 @@ bool check(Pos p, int n)
 	return true;
 }
 
+/**
+ * 只打印一种符合条件的情况
+ */
 bool place(qpos & Q)
 {
 	// 递归结束条件为没有要断续放置数字的位置
@@ -95,6 +104,28 @@ bool place(qpos & Q)
 	return false;
 }
 
+/**
+ * 打印所有符合条件的情况
+ */
+void place2(qpos & Q)
+{
+	// 递归结束条件为没有要断续放置数字的位置
+	if (Q.empty()) {
+		printSudoku();
+		return;
+	}
+	Pos cur(Q.front().row, Q.front().col);	// 当前需要放置的位置信息
+	Q.pop_front();
+	for (int i = 1; i <= 9; i++) {		// 从1到9轮流尝试
+		if ( check(cur, i) ) {
+			sudoku[cur.row][cur.col] = i;	// 放置数字i到当前位置
+			place2(Q);
+			sudoku[cur.row][cur.col] = 0;	// 将当前位置值重置
+		}
+	}		
+	Q.push_front(cur);	// 重新插入该位置信息，返回上一级放置位置
+}
+
 int main()
 {	
 	// Q中保存需要放置数字的位置
@@ -106,7 +137,8 @@ int main()
 		}
 	}
 
-	place(Q);
+	
+	place2(Q);
 
 	return 0;
 }
