@@ -1,5 +1,7 @@
 ##My practices for programming.
 
-My name: xuzhezhao
+Name: xuzhezhao
 
-My email: <zhezhaoxu@gmail.com>
+Email: <zhezhaoxu@gmail.com>
+
+Blog：<http://blog.csdn.net/xzz_hust/>
